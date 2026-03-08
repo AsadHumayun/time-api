@@ -3,7 +3,11 @@ organization := "dev.ahumayun"
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (
+    project in file(".")
+  )
+  .enablePlugins(PlayScala)
+  .settings(PlayKeys.playDefaultPort := 1111)
 
 scalaVersion := "2.13.18"
 
