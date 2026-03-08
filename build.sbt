@@ -1,0 +1,21 @@
+name := """timeapi"""
+organization := "dev.ahumayun"
+
+version := "1.0-SNAPSHOT"
+
+lazy val root = (
+    project in file(".")
+  )
+  .enablePlugins(PlayScala)
+  .settings(PlayKeys.playDefaultPort := 1111)
+
+scalaVersion := "2.13.18"
+
+libraryDependencies += guice
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.2" % Test
+
+// Adds additional packages into Twirl
+//TwirlKeys.templateImports += "dev.ahumayun.controllers._"
+
+// Adds additional packages into conf/routes
+// play.sbt.routes.RoutesKeys.routesImport += "dev.ahumayun.binders._"

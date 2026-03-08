@@ -23,3 +23,8 @@ server.pid
 *.eml
 /dist/
 .cache
+.idea
+.vscode
+metals
+.bloop
+.bsp
